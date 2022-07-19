@@ -12,7 +12,7 @@ public class EvalutionGithubUpdateShippingAddressTest {
         allList.add(ac);
         Test.startTest();
    		EvalutionGithubUpdateShippingAddress.UpdateShipAddress(allList);
-        Account ac =[Select Name,BillingStreet,ShippingStreet from account where Name ='Test' ];
+        Account ac =[Select Name,BillingStreet,ShippingStreet,BillingCity from account where BillingCity ='Test' ];
         System.assertEquals(ac.BillingStreet, ac.ShippingStreet);
         Test.StopTest();
     }
